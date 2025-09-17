@@ -16,7 +16,7 @@ server:
             - /test-resources
           url: https://ui5.sap.com
         backend:
-          - path: /sap
+          - path: /sap/opu
             url: http://applcoe01.deloitte.local:8000
             client: '200'
     - name: fiori-tools-appreload

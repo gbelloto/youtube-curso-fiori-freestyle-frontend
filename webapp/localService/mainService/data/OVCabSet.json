@@ -1,0 +1,202 @@
+[
+    {
+        "OrdemId": 321178058,
+        "DataCriacao": "/Date(1240100976000)/",
+        "CriadoPor": "CriadoPor1",
+        "ClienteId": 404064004,
+        "TotalItens": 4762637231033.29,
+        "TotalFrete": 1380168767645.95,
+        "TotalOrdem": 8104744099546.22,
+        "Status": "1"
+    },
+    {
+        "OrdemId": 803291670,
+        "DataCriacao": "/Date(860922376000)/",
+        "CriadoPor": "CriadoPor2",
+        "ClienteId": 814832890,
+        "TotalItens": 8010945729911.32,
+        "TotalFrete": 7060592679772.52,
+        "TotalOrdem": 8648425401188.43,
+        "Status": "2"
+    },
+    {
+        "OrdemId": 820260649,
+        "DataCriacao": "/Date(1429683700000)/",
+        "CriadoPor": "CriadoPor3",
+        "ClienteId": 655364378,
+        "TotalItens": 9503285714890.8,
+        "TotalFrete": 7887233083602.04,
+        "TotalOrdem": 8913364012259.99,
+        "Status": "3"
+    },
+    {
+        "OrdemId": 1781781547,
+        "DataCriacao": "/Date(1198653883000)/",
+        "CriadoPor": "CriadoPor4",
+        "ClienteId": 1721015111,
+        "TotalItens": 1364587356802.07,
+        "TotalFrete": 9391826458740.98,
+        "TotalOrdem": 100913639180.36,
+        "Status": "4"
+    },
+    {
+        "OrdemId": 248717029,
+        "DataCriacao": "/Date(701238220000)/",
+        "CriadoPor": "CriadoPor5",
+        "ClienteId": 1417144204,
+        "TotalItens": 764270043000.57,
+        "TotalFrete": 355755446944.38,
+        "TotalOrdem": 5988063148688.52,
+        "Status": "5"
+    },
+    {
+        "OrdemId": 810489894,
+        "DataCriacao": "/Date(271196830000)/",
+        "CriadoPor": "CriadoPor6",
+        "ClienteId": 89484718,
+        "TotalItens": 6183415115810.93,
+        "TotalFrete": 634455641265.95,
+        "TotalOrdem": 8010498103685.67,
+        "Status": "6"
+    },
+    {
+        "OrdemId": 1775192644,
+        "DataCriacao": "/Date(973123603000)/",
+        "CriadoPor": "CriadoPor7",
+        "ClienteId": 602710428,
+        "TotalItens": 422148862853.64,
+        "TotalFrete": 686927831266.07,
+        "TotalOrdem": 6043951655738.05,
+        "Status": "7"
+    },
+    {
+        "OrdemId": 389236754,
+        "DataCriacao": "/Date(1334642659000)/",
+        "CriadoPor": "CriadoPor8",
+        "ClienteId": 349574625,
+        "TotalItens": 4246690517757.08,
+        "TotalFrete": 4471489470452.07,
+        "TotalOrdem": 8965015579015.01,
+        "Status": "8"
+    },
+    {
+        "OrdemId": 2067280737,
+        "DataCriacao": "/Date(296658480000)/",
+        "CriadoPor": "CriadoPor9",
+        "ClienteId": 99840019,
+        "TotalItens": 296411844901.74,
+        "TotalFrete": 7124140099622.3,
+        "TotalOrdem": 5561578879132.86,
+        "Status": "9"
+    },
+    {
+        "OrdemId": 1090218421,
+        "DataCriacao": "/Date(1071405820000)/",
+        "CriadoPor": "CriadoPor10",
+        "ClienteId": 353280690,
+        "TotalItens": 4982324072625.48,
+        "TotalFrete": 7775315060280.26,
+        "TotalOrdem": 8483449509367.34,
+        "Status": "0"
+    },
+    {
+        "OrdemId": 1866835626,
+        "DataCriacao": "/Date(540078238000)/",
+        "CriadoPor": "CriadoPor11",
+        "ClienteId": 729269954,
+        "TotalItens": 987849070224.91,
+        "TotalFrete": 690725424792.61,
+        "TotalOrdem": 5255890812259.16,
+        "Status": "1"
+    },
+    {
+        "OrdemId": 1363986665,
+        "DataCriacao": "/Date(626956360000)/",
+        "CriadoPor": "CriadoPor12",
+        "ClienteId": 976708683,
+        "TotalItens": 461269926745.44,
+        "TotalFrete": 1915729935280.97,
+        "TotalOrdem": 7298403005115.68,
+        "Status": "2"
+    },
+    {
+        "OrdemId": 1715039548,
+        "DataCriacao": "/Date(1172417101000)/",
+        "CriadoPor": "CriadoPor13",
+        "ClienteId": 1823670478,
+        "TotalItens": 8248460947070.27,
+        "TotalFrete": 4548848287668.07,
+        "TotalOrdem": 8884700760245.32,
+        "Status": "3"
+    },
+    {
+        "OrdemId": 1361668046,
+        "DataCriacao": "/Date(1012637406000)/",
+        "CriadoPor": "CriadoPor14",
+        "ClienteId": 1947411217,
+        "TotalItens": 4218903779983.52,
+        "TotalFrete": 9978378971572.96,
+        "TotalOrdem": 7307278523221.61,
+        "Status": "4"
+    },
+    {
+        "OrdemId": 436638697,
+        "DataCriacao": "/Date(261771067000)/",
+        "CriadoPor": "CriadoPor15",
+        "ClienteId": 1077763056,
+        "TotalItens": 4137617540545.76,
+        "TotalFrete": 2051317896693.94,
+        "TotalOrdem": 4871662401128.56,
+        "Status": "5"
+    },
+    {
+        "OrdemId": 994177482,
+        "DataCriacao": "/Date(1430831066000)/",
+        "CriadoPor": "CriadoPor16",
+        "ClienteId": 514295319,
+        "TotalItens": 860929205082.35,
+        "TotalFrete": 8839614414609.96,
+        "TotalOrdem": 2552361986599.86,
+        "Status": "6"
+    },
+    {
+        "OrdemId": 1581184030,
+        "DataCriacao": "/Date(386427704000)/",
+        "CriadoPor": "CriadoPor17",
+        "ClienteId": 234721229,
+        "TotalItens": 8717442257329.82,
+        "TotalFrete": 7204134939238.42,
+        "TotalOrdem": 3922938618343.32,
+        "Status": "7"
+    },
+    {
+        "OrdemId": 786554138,
+        "DataCriacao": "/Date(336105931000)/",
+        "CriadoPor": "CriadoPor18",
+        "ClienteId": 879550266,
+        "TotalItens": 260826302692.29,
+        "TotalFrete": 2037062612362.2,
+        "TotalOrdem": 1073903427459.29,
+        "Status": "8"
+    },
+    {
+        "OrdemId": 74429972,
+        "DataCriacao": "/Date(1071144368000)/",
+        "CriadoPor": "CriadoPor19",
+        "ClienteId": 1125513455,
+        "TotalItens": 4485792762134.22,
+        "TotalFrete": 1145067024044.69,
+        "TotalOrdem": 5255963858217,
+        "Status": "9"
+    },
+    {
+        "OrdemId": 644961095,
+        "DataCriacao": "/Date(955117219000)/",
+        "CriadoPor": "CriadoPor20",
+        "ClienteId": 463403456,
+        "TotalItens": 4933128673583.26,
+        "TotalFrete": 3567657109815.62,
+        "TotalOrdem": 4581205167341.97,
+        "Status": "0"
+    }
+]
