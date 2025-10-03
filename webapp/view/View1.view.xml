@@ -1,68 +1,41 @@
 <mvc:View controllerName="zovgrp.controller.View1"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns:t="sap.ui.table"
     xmlns:core="sap.ui.core"
     xmlns:f="sap.ui.layout.form"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
+    <VBox class="sapUiTinyMargin">
 
-        <f:Form id="FormChange354" editable="true">
-            <f:title>
-                <core:Title text="Calculadora" />
-            </f:title>
-            <f:layout>
-                <f:ResponsiveGridLayout
-                    labelSpanXL="3"
-                    labelSpanL="3"
-                    labelSpanM="3"
-                    labelSpanS="12"
-                    adjustLabelSpan="false"
-                    emptySpanXL="4"
-                    emptySpanL="4"
-                    emptySpanM="4"
-                    emptySpanS="0"
-                    columnsXL="1"
-                    columnsL="1"
-                    columnsM="1"
-                    singleContainerFullSize="false" />
-            </f:layout>
-            <f:formContainers>
-                <f:FormContainer>
-                    <f:formElements>
-                        <f:FormElement label="1º Bimestre">
-                            <f:fields>
-                                <Input value="" id="b1"/>
-                            </f:fields>
-                        </f:FormElement>
-                        <f:FormElement label="2º Bimestre">
-                            <f:fields>
-                                <Input value="" id="b2"/>
-                            </f:fields>
-                        </f:FormElement>
-                        <f:FormElement label="3º Bimestre">
-                            <f:fields>
-                                <Input value="" id="b3"/>
-                            </f:fields>
-                        </f:FormElement>
-                        <f:FormElement label="4º Bimestre">
-                            <f:fields>
-                                <Input value="" id="b4"/>
-                            </f:fields>
-                        </f:FormElement>
-                        <f:FormElement label="Resultado">
-                            <f:fields>
-                                <Input value="" id="resultado" editable="false"/>
-                            </f:fields>
-                        </f:FormElement>
-                        <f:FormElement label="">
-                            <f:fields>
-                                <Button text="Calcular" press="onCalcular"/>
-                            </f:fields>
-                        </f:FormElement>
-                    </f:formElements>
-                </f:FormContainer>
-            </f:formContainers>
-        </f:Form>
+    <Label text="Model 'Usuarios' (origem: Manisfest)" />
+    <Text text="{usuarios>/0/id} - {usuarios>/0/nome}" />
 
+    <Text text="-----------------------------------" />
+    <Button text="Testar Models" press="onTestModels" /> 
+
+    <Label text="One way - Model para View" />
+    <Input value="{oneway>/usuario/nome}" />
+    <Text text="{oneway>/usuario/nome}" />
+    <Button text="One Way - Adicionar Ponto Final" press="onTestOneWay" />
+
+    <Text text="-----------------------------------" />
+    <Label text="Two way - Model para View e inverso" />
+    <Input value="{twoway>/usuario/nome}" />
+    <Text text="{twoway>/usuario/nome}" />
+    <Button text="Two Way - Adicionar Ponto Final" press="onTestTwoWay" />
+
+    <Text text="-----------------------------------" />
+    <Label text="One time - Model para View 1 vez" />
+    <Input value="{onetime>/usuario/nome}" />
+    <Text text="{onetime>/usuario/nome}" />
+
+    <Button text="One Time - Adicionar Ponto Final" press="onTestOneTime" />
+    
+    <Text text="-----------------------------------" />
+    <Label text="Model padrao do servico (origem: Manisfest)" />
+    <List headerText="Ordens" items="{ path: '/OVCabSet' }" >
+        <StandardListItem title="Ordem {OrdemId}" description="{CriadoPor}" /> 
+    </List>
+    
+    </VBox>
     </Page>
 </mvc:View>
