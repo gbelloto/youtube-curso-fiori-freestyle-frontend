@@ -1,0 +1,12 @@
+<mvc:View controllerName="zovgrp.controller.CustomerFormView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form"
+    xmlns="sap.m">
+    <Page id="page2" title="Formulário do cliente" showNavButton="true" navButtonPress="onNavBack">
+        <VBox class="sapUiTinyMargin">
+            <Text text="Estou no CustomerFormView"/>
+            <Button text="Voltar para View1" press="onView1"/>
+        </VBox>
+    </Page>
+</mvc:View>

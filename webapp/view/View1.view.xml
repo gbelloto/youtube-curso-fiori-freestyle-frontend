@@ -4,38 +4,9 @@
     xmlns:f="sap.ui.layout.form"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-    <VBox class="sapUiTinyMargin">
-
-    <Label text="Model 'Usuarios' (origem: Manisfest)" />
-    <Text text="{usuarios>/0/id} - {usuarios>/0/nome}" />
-
-    <Text text="-----------------------------------" />
-    <Button text="Testar Models" press="onTestModels" /> 
-
-    <Label text="One way - Model para View" />
-    <Input value="{oneway>/usuario/nome}" />
-    <Text text="{oneway>/usuario/nome}" />
-    <Button text="One Way - Adicionar Ponto Final" press="onTestOneWay" />
-
-    <Text text="-----------------------------------" />
-    <Label text="Two way - Model para View e inverso" />
-    <Input value="{twoway>/usuario/nome}" />
-    <Text text="{twoway>/usuario/nome}" />
-    <Button text="Two Way - Adicionar Ponto Final" press="onTestTwoWay" />
-
-    <Text text="-----------------------------------" />
-    <Label text="One time - Model para View 1 vez" />
-    <Input value="{onetime>/usuario/nome}" />
-    <Text text="{onetime>/usuario/nome}" />
-
-    <Button text="One Time - Adicionar Ponto Final" press="onTestOneTime" />
-    
-    <Text text="-----------------------------------" />
-    <Label text="Model padrao do servico (origem: Manisfest)" />
-    <List headerText="Ordens" items="{ path: '/OVCabSet' }" >
-        <StandardListItem title="Ordem {OrdemId}" description="{CriadoPor}" /> 
-    </List>
-    
-    </VBox>
+        <VBox class="sapUiTinyMargin">
+            <Button text="Novo Cliente" press="onNewCustomer"/>
+            <Button text="Modificar Cliente1" press="onEditCustomer1"/>
+        </VBox>
     </Page>
 </mvc:View>
