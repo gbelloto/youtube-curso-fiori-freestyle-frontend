@@ -8,8 +8,11 @@ sap.ui.define([
     function (Controller, MessageToast) {
         "use strict";
 
-        return Controller.extend("zov.controller.View1",{
+        return Controller.extend("zov.controller.View2",{
             onInit: function(){
+
+                var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+                oRouter.getRoute("RouteView2").attachMatched(this._onRouteMatchedView2, this);
                 var oView = this.getView();
                 var oFModel = new sap.ui.model.json.JSONModel();
 
@@ -23,15 +26,20 @@ sap.ui.define([
                     "TotalOrdem": "",
                     "Status": "",
                     "OrdenacaoCampo": "OrdemId",
-                    "OrdenacaoTipo": "ASC"
+                    "OrdenacaoTipo": "ASC",
+                    "Limite": 5,
+                    "Offset": 0
                 });
                 oView.setModel(oFModel, "filter");
+
+                var oTModel = new sap.ui.model.json.JSONModel();
+                oTModel.setData([]);
+                oView.setModel(oTModel, "table")
                 this.onFilterSearch();
             },
             
-            onView2: function(){
-                var r = sap.ui.core.UIComponent.getRouterFor(this);
-                r.navTo("RouteView2");
+            _onRouteMatchedView2: function(oEvent){
+                //alert("Modo criação do cliente");
             },
 
             onFilterReset: function(){
@@ -53,15 +61,15 @@ sap.ui.define([
             },
 
             onFilterSearch: function(){
-
-                
                 var oView = this.getView();
-                var oTable = oView.byId("table1");
+                var oModel = this.getOwnerComponent().getModel();
                 var oFModel = oView.getModel("filter");
+                var oTModel = oView.getModel("table");
                 var oFData = oFModel.getData();
                 var oFilter = null;
                 var aParams = [];
-
+                var that = this;
+                
                 // aplicando filtros
                 var aSorter = [];
                 var aFilters = [];
@@ -101,19 +109,29 @@ sap.ui.define([
                 var oSort = new sap.ui.model.Sorter(oFData.OrdenacaoCampo, bDescending);
                 aSorter.push(oSort);
 
+                // limite, offset
+                aParams.push("$top="+oFData.Limite);
+                aParams.push("$skip="+oFData.Offset);
+
                 // executando o filtro
-                oTable.bindRows({
-                    path: '/OVCabSet',
-                    sorter: aSorter,
-                    filters: aFilters
+                this.getView().setBusy(true);
+                oModel.read("/OVCabSet",{
+                    sorters: aSorter,
+                    filters: aFilters,
+                    urlParameters: aParams,
+
+                    success: function(oData2, oResponse){
+                        that.getView().setBusy(false);
+                        oTModel.setData(oData2.results);
+                    },
+                    error: function (oError){
+                        that.getView().setBusy(false);
+                        MessageToast.show("erro");
+                    }
                 }
+
                 )
-
-                
-                
             }
-
-
 
 /*            onCreateOVCab: function(){
                 var oData = {

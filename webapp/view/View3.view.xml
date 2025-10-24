@@ -1,13 +1,15 @@
-<mvc:View controllerName="zovgrp.controller.View1"
+<mvc:View controllerName="zovgrp.controller.View3"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns:core="sap.ui.core"
     xmlns:t="sap.ui.table"
     xmlns:fb="sap.ui.comp.filterbar"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <Button text="view2" press="onView2" />
-        
-        <fb:FilterBar id="filterBar1" reset="onFilterReset" search="onFilterSearch">
+    <Page id="page3" title="{i18n>title}">
+
+
+
+
+       <fb:FilterBar id="filterBar2" reset="onFilterReset" search="onFilterSearch">
         <fb:filterItems>
             <fb:FilterItem name="OrdemId" label="{i18n>OrdemId}">
                 <fb:control>
@@ -16,7 +18,7 @@
             </fb:FilterItem>
             <fb:FilterItem name="ClienteId" label="{i18n>ClienteId}">
                 <fb:control>
-                    <Input value="{filter>/ClienteId}" />  
+                    <Input value="{filter>/ClienteId}" />
                 </fb:control>
             </fb:FilterItem> 
 
@@ -50,11 +52,25 @@
                 </fb:control>
             </fb:FilterItem>
 
+            <fb:FilterItem name="Limite" label="{i18n>Limite}">
+                <fb:control>
+                    <Input value="{filter>/Limite}" type="Number" />
+                </fb:control>
+            </fb:FilterItem> 
+
+            <fb:FilterItem name="Offset" label="{i18n>Offset}">
+                <fb:control>
+                    <Input value="{filter>/Offset}" type="Number" />
+                </fb:control>
+            </fb:FilterItem> 
+
         </fb:filterItems>
         </fb:FilterBar>
 
-        <t:Table id="table1"
-        rows="{/OVCabSet}"
+
+
+<t:Table id="table3"
+        rows="{/table>/"
         selectionMode="MultiToggle"
         class="sapUiSmallMargin"
         rowMode="Fixed"
@@ -85,10 +101,10 @@
                     <Text text="{ClienteId}" wrapping="false" />
                 </t:template>
             </t:Column>
-            <t:Column width="100px" sortProperty="CriadoPor" filterProperty="CriadoPor">
-                <Label text="{i18n>CriadoPor}" />
+            <t:Column width="100px" sortProperty="CriadPor" filterProperty="CriadPor">
+                <Label text="{i18n>CriadPor}" />
                 <t:template>
-                    <Text text="{CriadoPor}" wrapping="false" />
+                    <Text text="{CriadPor}" wrapping="false" />
                 </t:template>
             </t:Column>
             <t:Column width="100px" sortProperty="TotalItens" filterProperty="TotalItens">
@@ -117,6 +133,14 @@
             </t:Column>
         </t:columns>
         </t:Table>
-        
+
+
+
+
+
+
+
+
+
     </Page>
 </mvc:View>

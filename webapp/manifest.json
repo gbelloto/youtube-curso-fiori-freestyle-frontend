@@ -103,17 +103,10 @@
           ]
         },
         {
-          "name": "RouteCustomerNew",
-          "pattern": "customer/new",
+          "name": "RouteView2",
+          "pattern": "tela/view2",
           "target": [
-            "TargetCustomerForm"
-          ]
-        },
-        {
-          "name": "RouteCustomerEdit",
-          "pattern": "customer/{CustomerId}/edit",
-          "target": [
-            "TargetCustomerForm"
+            "TargetView2"
           ]
         }
       ],
@@ -125,12 +118,12 @@
           "viewId": "View1",
           "viewName": "View1"
         },
-        "TargetCustomerForm": {
+        "TargetView2": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "CustomerFormView",
-          "viewName": "CustomerFormView"
+          "viewId": "View2",
+          "viewName": "View2"
         }
       }
     },
