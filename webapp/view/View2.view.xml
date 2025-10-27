@@ -62,6 +62,13 @@
 
         </fb:filterItems>
         </fb:FilterBar>
+
+        <FlexBox alignItems="Center" justifyContent="End">
+            <Button text="Fornecer (L)" class="sapUITinyMarginEnd" press="onAtualizarStatus('L')" />
+            <Button text="Faturar (F)" class="sapUITinyMarginEnd" press="onAtualizarStatus('F')" />
+            <Button text="Cancelar (C)" class="sapUITinyMarginEnd" press="onAtualizarStatus('C')" />
+        </FlexBox>    
+
         <t:Table id="table2"
         rows="{table>/}"
         selectionMode="MultiToggle"

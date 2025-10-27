@@ -38,6 +38,95 @@ sap.ui.define([
                 this.onFilterSearch();
             },
             
+
+            onAtualizarStatus: function(sStatus){
+                
+                var oTable = this.getView().byId("table2");
+                var oModel = this.getOwnerComponent().getModel();
+                var aIndex = oTable.getSelectedIndices();
+                var that = this;
+                var vMsg = "";
+                
+                if(aIndex.length == 0){
+                    MessageToast.show("Selecionar uma linha");
+                    return;
+                }
+
+                var vAtual = 0;
+                var vMax = 0;
+
+                vMax = aIndex.length;
+
+                this.getView().setBusy(true);
+                while(vAtual < vMax ){
+                    var oItem = oTable.getContextByIndex(aIndex[vAtual]);
+                    var iOrdemId = oItem.getProperty("OrdemId");
+
+                    //alert(iOrdemId);
+                    oModel.callFunction(
+                    "/zfi_atualiza_status",
+                    {
+                        method: "GET",
+                        urlParameters: {
+                          ID_ORDEMID: iOrdemId,
+                          ID_STATUS: sStatus      
+                        },
+                        success: function(oData, response){
+                            //vMsg = vMsg + "Status atualizado da ordem "+ iOrdemId;
+                            //alert(vMsg);
+                            //MessageToast.show("Status atualizado da ordem "+iOrdemId);
+                            that.onFilterSearch();
+                        },
+
+                        error: function(oError){
+                            //vMsg = vMsg + "Erro ao atualizar status da ordem "+iOrdemId;
+                            //alert(vMsg);
+                            //MessageToast.show("Erro ao atualizar status da ordem "+iOrdemId);
+                        }
+                        
+                    }
+
+                )
+                vMsg = vMsg + "/Status atualizado da ordem "+ iOrdemId;
+                vAtual = vAtual + 1;
+                }
+
+                MessageToast.show(vMsg);
+                that.onFilterSearch();    
+                that.getView().setBusy(false);
+
+/*
+                var oItem = oTable.getContextByIndex(aIndex[0]);
+                var iOrdemId = oItem.getProperty("OrdemId");
+                
+                
+                //this.getView().setBusy(true);
+                oModel.callFunction(
+                    "/zfi_atualiza_status",
+                    {
+                        method: "GET",
+                        urlParameters: {
+                          ID_ORDEMID: iOrdemId,
+                          ID_STATUS: sStatus      
+                        },
+                        success: function(oData, response){
+                            that.getView().setBusy(false);
+                            MessageToast.show("Status atualizado com sucesso");
+                            that.onFilterSearch();    
+                        },
+
+                        error: function(oError){
+                            that.getView().setBusy(false);
+                            MessageToast.show("Erro ao atualizar status");
+                        }
+
+                    }
+
+                )*/
+
+
+            },
+
             _onRouteMatchedView2: function(oEvent){
                 //alert("Modo criação do cliente");
             },
