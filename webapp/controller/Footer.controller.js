@@ -8,15 +8,15 @@ sap.ui.define([
     function (Controller, MessageToast, formatter) {
         "use strict";
 
-        return Controller.extend("zov_grp.controller.View1",{
+        return Controller.extend("zov_grp.controller.Footer",{
 
            
             onInit: function(){
               
             },
 
-            onHeader: function(){
-                alert("onHeader");
+            onFooter: function(){
+                alert("onFooter");
             }
 
         });
