@@ -7,6 +7,7 @@
     <Page id="page1" title="{i18n>title}">
         <Button text="view2" press="onView2" />
         
-        <Button text='Abrir dialog' press='onOpenDialogInfo' />
+        <Button text='Requisição normal' press='onRequisicaoNormal' />
+        <Button text='Requisição batch' press='onRequisicaoBatch' />
     </Page>
 </mvc:View>

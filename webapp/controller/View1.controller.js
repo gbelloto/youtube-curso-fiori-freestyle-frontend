@@ -15,26 +15,56 @@ sap.ui.define([
               
             },
 
-            onOpenDialogInfo: function(){
-                var that = this;
-                var sName = "zovgrp.view.DialogInfo";
+            onRequisicaoNormal(){
+                this.executeRequests(false);
+            },
 
-                if(!this.oDialog){
-                    this.loadFragment({
-                        name: sName
-                    }).then(function(oDialog2){
-                        that.oDialog = oDialog2;
-                        that.oDialog.open();
-                    }.bind(this));
-            }else{
-                this.oDialog.open();
+            onRequisicaoBatch(){
+                this.executeRequests(false);
+            },
+
+            executeRequests(bUseBatch){
+
+                var oModel = this.getOwnerComponent().getModel();
+                oModel.setUseBatch(bUseBatch);
+
+                console.log("Executando requisições");
+                console.log("---------------------------------");
+
+                // Requisição 1
+                oModel.read("/OVCabSet(2)",{
+                   success: function(oData2, oResponse){
+                        console.log("Leitura chave 2: Ok");
+                   },
+                   error: function(oError){
+                        console.log("Leitura chave 2: erro");
+                        console.log(oError);
+                   }
+                });
+
+                // Requisição 2
+                oModel.read("/OVCabSet(3)",{
+                   success: function(oData2, oResponse){
+                        console.log("Leitura chave 3: Ok");
+                   },
+                   error: function(oError){
+                        console.log("Leitura chave 3: erro");
+                        console.log(oError);
+                   }
+                });            
+
+                // Requisição 3
+                oModel.read("/OVCabSet(5)",{
+                   success: function(oData2, oResponse){
+                        console.log("Leitura chave 5: Ok");
+                   },
+                   error: function(oError){
+                        console.log("Leitura chave 5: erro");
+                        console.log(oError);
+                   }
+                });  
+
             }
 
-        },
-
-        onCloseDialogInfo: function(){
-            this.byId("DialogInfo").close();
-        }
-    
         });
     });
