@@ -7,11 +7,6 @@
     <Page id="page1" title="{i18n>title}">
         <Button text="view2" press="onView2" />
         
-        <core:Fragment fragmentName="zovgrp.view.Header" type="XML" />
-        <VBox class="sapUiTinyMargin">
-            <Text text="Conteúdo" />
-        </VBox>
-        
-        <mvc:XMLView viewName="zovgrp.view.Footer" />
+        <Button text='Abrir dialog' press='onOpenDialogInfo' />
     </Page>
 </mvc:View>
