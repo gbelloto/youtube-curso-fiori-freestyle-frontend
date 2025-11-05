@@ -14,83 +14,30 @@ sap.ui.define([
               
             },
 
-            onTestCallback: function(){
-                console.log("[Processo 1] Início");
-                this.onConsultaOrdem(2, function(oData, oResponse){
-                    console.log("[Processo 2] Terminou consulta");
-                    console.log(oData);
-                    console.log(oResponse);
-                });
-                console.log("[Processo 1] Fim");
-            },
-
-            onConsultaOrdem: function(iId, callback){
+            onExibirTotal: function(){
+                // debugger
+                var that = this;
+                var sOrdemId = this.getView().byId("ordemid").getValue();
                 var oModel = this.getOwnerComponent().getModel();
-                oModel.setUseBatch(false);
-                oModel.read("/OVCabSet("+iId+")",{
-                    success: function(oData2, oResponse){
-                        callback(oData2. oResponse);    
-                    },
-                    error: function(oError){
 
-                    }
-                    }
-                );
-            },
-            onTestPromise1: function(){
-                console.log("[Processo 1] Início");
-                var oPromise1 = this.onConsultaOrdem2(2);
-                oPromise1.then(function(oData, oResponse){
-                    console.log("[Processo 2] Terminou");
-                    console.log(oData);
-                    console.log(oResponse);
-                });
-                console.log("[Processo 1] Fim");
-            },
-
-            onTestPromise2: function(){
-                console.log("[Processo 1] Início");
-                
-                var oPromise1 = this.onConsultaOrdem2(3);  
-                oPromise1.then(function(oData, oResponse){
-                    console.log("[Processo 2] Terminou");
-                });
-
-                var oPromise2 = this.onConsultaOrdem2(5);  
-                oPromise2.then(function(oData, oResponse){
-                    console.log("[Processo 3] Terminou");
-                });
-                
-                var oPromise3 = this.onConsultaOrdem2(6);  
-                oPromise3.then(function(oData, oResponse){
-                    console.log("[Processo 4] Terminou");
-                });
-
-                Promise.all([oPromise1, oPromise2]).then(function(aRetorno){
-                    console.log("[Processo 5] Promise.all terminou");
-                    console.log(aRetorno);                    
-                });
-
-                console.log("[Processo 1] Fim");
-
-            },
-
-            onConsultaOrdem2: function(iId){
-                var oModel = this.getOwnerComponent().getModel();
-                oModel.setUseBatch(false);
-
-                return new Promise(function(resolve, reject){
-                    oModel.read("/OVCabSet("+iId+")",{
+                oModel.read("/OVCabSet("+sOrdemId+")",{
                         success: function(oData2, oResponse){
-                            resolve({oData: oData2, oResponse: oResponse});
+                            var sMensagem = that.montarMensagem(oData2);
+                            alert(sMensagem);
                         },
-
                         error: function(oError){
-                            reject({oError:oError});
+                            
                         }
-                    })
-                })
+                    });
+            },
 
+            montarMensagem: function(oOrdem){
+                var sMensagem = "";
+
+                sMensagem += "O valor total de ordem é ";
+                sMensagem += oOrdem.TotalOrdem;
+
+                return sMensagem;
             }
 
         });

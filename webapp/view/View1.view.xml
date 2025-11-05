@@ -7,8 +7,10 @@
     <Page id="page1" title="{i18n>title}">
         <Button text="view2" press="onView2" />
         
-        <Button text='Callback' press='onTestCallback' />
-        <Button text='Promise (1)' press='onTestPromise1' />
-        <Button text='Promise (N)' press='onTestPromise2' />
+        <VBox class="sapUsSmallMargin">
+            <Label text="Id Ordem" />
+            <Input value="" id="ordemid"/>
+            <Button text="Exibir Total" press="onExibirTotal" />
+        </VBox>
     </Page>
 </mvc:View>
