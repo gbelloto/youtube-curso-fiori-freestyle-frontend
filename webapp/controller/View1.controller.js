@@ -1,5 +1,6 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
+    //"sap/ui/core/mvc/Controller",
+    "zovgrp/controller/BaseController",
     "sap/m/MessageToast"
 ],
     /**
@@ -26,7 +27,7 @@ sap.ui.define([
                             alert(sMensagem);
                         },
                         error: function(oError){
-                            
+
                         }
                     });
             },
@@ -38,6 +39,11 @@ sap.ui.define([
                 sMensagem += oOrdem.TotalOrdem;
 
                 return sMensagem;
+            },
+
+            onFormulario: function(){
+                 var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+                 oRouter.navTo("RouteView2");
             }
 
         });

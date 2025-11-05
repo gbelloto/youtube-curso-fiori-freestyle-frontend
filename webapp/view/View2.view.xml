@@ -5,6 +5,7 @@
     xmlns:fb="sap.ui.comp.filterbar"
     xmlns="sap.m">
     <Page id="page2" title="{i18n>title}">
+    <Button text="Processar" press="onProcessar" />
         <fb:FilterBar id="filterBar2" reset="onFilterReset" search="onFilterSearch">
         <fb:filterItems>
             <fb:FilterItem name="OrdemId" label="{i18n>OrdemId}">

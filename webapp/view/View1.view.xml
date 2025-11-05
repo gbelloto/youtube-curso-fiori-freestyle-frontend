@@ -8,9 +8,9 @@
         <Button text="view2" press="onView2" />
         
         <VBox class="sapUsSmallMargin">
-            <Label text="Id Ordem" />
-            <Input value="" id="ordemid"/>
-            <Button text="Exibir Total" press="onExibirTotal" />
+            <Text text="Estou na listagem" />
+            <Button text="Ir para o formulário" press="onFormulario" />
+            <Button text="Processar" press="onProcessar" />
         </VBox>
     </Page>
 </mvc:View>
