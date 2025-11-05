@@ -7,7 +7,8 @@
     <Page id="page1" title="{i18n>title}">
         <Button text="view2" press="onView2" />
         
-        <Button text='Requisição normal' press='onRequisicaoNormal' />
-        <Button text='Requisição batch' press='onRequisicaoBatch' />
+        <Button text='Callback' press='onTestCallback' />
+        <Button text='Promise (1)' press='onTestPromise1' />
+        <Button text='Promise (N)' press='onTestPromise2' />
     </Page>
 </mvc:View>
